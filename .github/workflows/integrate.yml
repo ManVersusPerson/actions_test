@@ -1,22 +1,16 @@
-name: Node Continuous Integration
+name: Super-Linter
 
-on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
-
+on: push
 
 jobs:
-  test_pull_request:
+  super-lint:
+    name: Lint code base
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 12
-      - run: pwd
-      - run: ls -lah
-      - run: npm ci
-      - run: npm test
-      - run: npm run build
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Run Super-Linter
+        uses: github/super-linter@v3
+        env:
+          DEFAULT_BRANCH: main
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
