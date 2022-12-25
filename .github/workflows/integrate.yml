@@ -13,4 +13,5 @@ jobs:
       - run: ls -lah 
       - run: pip -V
       - run: python --version
+      - run: python -m pip install -U numpy
       - run: python -c "import numpy; print(numpy.version.version)"
