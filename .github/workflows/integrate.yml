@@ -20,5 +20,7 @@ jobs:
       - run: |
           cd download_to_action-main
           ls -lah
+          pwd
           cd ..
           ls -lah
+          pwd
