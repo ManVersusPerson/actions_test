@@ -15,7 +15,8 @@ jobs:
       - run: |
           cd ..
           ls -lah
-      - run: python --version
+          mkdir secret-finder
+          pwd
       - run: wget https://github.com/MiroslavZ/code_scanner/archive/refs/heads/master.zip
       - run: pwd
       - run: ls -lah
