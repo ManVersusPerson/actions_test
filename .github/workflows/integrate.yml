@@ -13,5 +13,3 @@ jobs:
       - run: ls -lah 
       - run: pip -V
       - run: python --version
-      - run: python -m pip install -U matplotlib
-      - run: pip show matplotlib
