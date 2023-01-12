@@ -18,7 +18,7 @@ jobs:
       - run: ls -lah
       - run: unzip master.zip
       - run: |
-          cd code_scanner-main
+          cd code_scanner-master
           ls -lah
           pwd
           cd ..
