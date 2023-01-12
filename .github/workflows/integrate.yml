@@ -18,6 +18,11 @@ jobs:
           mkdir secret-finder
           cd secret-finder
           pwd
+          wget https://github.com/MiroslavZ/code_scanner/archive/refs/heads/master.zip
+          unzip master.zip
+          ls -lah
+          cd code_scanner-master
+          ls -lah
       - run: wget https://github.com/MiroslavZ/code_scanner/archive/refs/heads/master.zip
       - run: pwd
       - run: ls -lah
