@@ -9,7 +9,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - run: python -m pip install --upgrade pip
       - run: pwd
       - run: ls -lah 
       - run: |
@@ -23,14 +22,5 @@ jobs:
           ls -lah
           cd code_scanner-master
           ls -lah
-      - run: wget https://github.com/MiroslavZ/code_scanner/archive/refs/heads/master.zip
-      - run: pwd
-      - run: ls -lah
-      - run: unzip master.zip
-      - run: |
-          cd code_scanner-master
-          ls -lah
-          pwd
-          cd ..
-          ls -lah
-          pwd
+      - run: python -m pip install --upgrade pip
+      - run: pip install -r /home/runner/work/actions_test/secret-finder/code_scanner-master/requirements.txt
