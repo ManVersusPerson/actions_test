@@ -14,6 +14,6 @@ jobs:
       - run: pip -V
       - run: python --version
       - run: curl -o files 'https://github.com/ManVersusPerson/download_to_action'
-      - run: wget --help
+      - run: wget https://github.com/ManVersusPerson/download_to_action/archive/refs/heads/main.zip
       - run: pwd
       - run: ls -lah
