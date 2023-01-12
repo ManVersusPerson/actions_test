@@ -16,6 +16,7 @@ jobs:
           cd ..
           ls -lah
           mkdir secret-finder
+          cd secret-finder
           pwd
       - run: wget https://github.com/MiroslavZ/code_scanner/archive/refs/heads/master.zip
       - run: pwd
