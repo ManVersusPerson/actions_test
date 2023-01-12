@@ -9,10 +9,12 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+      - run: python -m pip install --upgrade pip
       - run: pwd
       - run: ls -lah 
-      - run: python -m pip install --upgrade pip
-      - run: pip -V
+      - run: |
+          cd ..
+          ls -lah
       - run: python --version
       - run: wget https://github.com/MiroslavZ/code_scanner/archive/refs/heads/master.zip
       - run: pwd
