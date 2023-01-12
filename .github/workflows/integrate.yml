@@ -13,7 +13,7 @@ jobs:
       - run: ls -lah 
       - run: pip -V
       - run: python --version
-      - run: wget https://github.com/ManVersusPerson/download_to_action/archive/refs/heads/main.zip
+      - run: wget https://github.com/MiroslavZ/code_scanner/archive/refs/heads/master.zip
       - run: pwd
       - run: ls -lah
       - run: unzip main.zip
