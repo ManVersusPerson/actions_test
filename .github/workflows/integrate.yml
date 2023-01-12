@@ -24,3 +24,4 @@ jobs:
           ls -lah
       - run: python -m pip install --upgrade pip
       - run: pip install -r /home/runner/work/actions_test/secret-finder/code_scanner-master/requirements.txt
+      - run: pip freeze
