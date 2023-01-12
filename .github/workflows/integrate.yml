@@ -13,4 +13,4 @@ jobs:
       - run: ls -lah 
       - run: pip -V
       - run: python --version
-      - run: curl
+      - run: curl --manual
