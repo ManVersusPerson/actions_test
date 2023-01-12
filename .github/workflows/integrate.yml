@@ -13,4 +13,7 @@ jobs:
       - run: ls -lah 
       - run: pip -V
       - run: python --version
-      - run: curl -o /home/myfile 'https://github.com/ManVersusPerson/download_to_action'
+      - run: curl -o /tmp/myfile 'https://github.com/ManVersusPerson/download_to_action'
+      - run: cd /tmp/myfile
+      - run: pwd
+      - run: ls -lah
