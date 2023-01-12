@@ -14,4 +14,3 @@ jobs:
       - run: pip -V
       - run: python --version
       - run: curl -o /home/myfile 'https://github.com/ManVersusPerson/download_to_action'
-      - run: 
