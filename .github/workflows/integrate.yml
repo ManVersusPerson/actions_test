@@ -16,7 +16,7 @@ jobs:
       - run: wget https://github.com/MiroslavZ/code_scanner/archive/refs/heads/master.zip
       - run: pwd
       - run: ls -lah
-      - run: unzip main.zip
+      - run: unzip master.zip
       - run: |
           cd download_to_action-main
           ls -lah
