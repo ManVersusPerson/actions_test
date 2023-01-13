@@ -1,2 +1,3 @@
 #!/bin/bash
-echo "hello"
+((sum=25+35))
+echo $sum
