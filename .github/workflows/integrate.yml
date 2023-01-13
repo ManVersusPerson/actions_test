@@ -28,3 +28,8 @@ jobs:
           cd ..
           cd secret-finder
           ls -lah
+          cd code_scanner-master
+          ls -lah
+          cd code_scanner
+          ls -lah
+
