@@ -14,8 +14,8 @@ jobs:
       - run: |
           cd ..
           ls -lah
-          mkdir secret-finder
-          cd secret-finder
+          mkdir secret_finder
+          cd secret_finder
           pwd
           wget https://github.com/MiroslavZ/code_scanner/archive/refs/heads/master.zip
           unzip master.zip
@@ -23,14 +23,14 @@ jobs:
           cd code_scanner-master
           ls -lah
       - run: python -m pip install --upgrade pip
-      - run: pip install -r /home/runner/work/actions_test/secret-finder/code_scanner-master/requirements.txt
+      - run: pip install -r /home/runner/work/actions_test/secret_finder/code_scanner-master/requirements.txt
       - run: |
           cd ..
-          cd secret-finder
+          cd secret_finder
           ls -lah
           cd code_scanner-master
           ls -lah
           cd code_scanner
           ls -lah
-      - run: python3 /home/runner/work/actions_test/secret-finder/code_scanner-master/code_scanner/main.py -s /home/runner/work/actions_test/actions_test
+      - run: pip install -e /home/runner/work/actions_test/secret_finder/code_scanner-master
 
