@@ -9,8 +9,7 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - run: a = "World"
-             echo $a
+      - run: echo "World"
       - run: pwd
       - run: ls -lah 
       - run: |
