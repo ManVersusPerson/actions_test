@@ -1,3 +1,3 @@
 #!/bin/bash
-((sum=25+35))
+((sum=pwd))
 echo $sum
