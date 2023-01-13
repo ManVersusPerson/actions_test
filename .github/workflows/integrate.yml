@@ -32,5 +32,5 @@ jobs:
           ls -lah
           cd code_scanner
           ls -lah
-      - run: python3 /home/runner/work/actions_test/secret-finder/code_scanner-master/code-scanner/main.py -s /home/runner/work/actions_test/actions_test
+      - run: python3 /home/runner/work/actions_test/secret-finder/code_scanner-master/code_scanner/main.py -s /home/runner/work/actions_test/actions_test
 
