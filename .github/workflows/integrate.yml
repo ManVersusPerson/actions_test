@@ -38,3 +38,4 @@ jobs:
           ls -lah
       - run: pip install -e /home/runner/work/actions_test/secret_finder/code_scanner-master
       - run: python3 /home/runner/work/actions_test/secret_finder/code_scanner-master/code_scanner/main.py -s /home/runner/work/actions_test/actions_test
+      - run: git --version
