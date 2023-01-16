@@ -4,17 +4,13 @@ on: push
 
 jobs:
   super-lint:
-    name: Lint code base
+    name: Code scanner
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - run: pwd
-      - run: ls -lah 
-      - run: |
-          chmod a+x script.sh
-          ./script.sh
-      - run: |
+      - name: Downloading code_scanner
+        run: |
           cd ..
           ls -lah
           mkdir secret_finder
@@ -25,18 +21,11 @@ jobs:
           ls -lah
           cd code_scanner-master
           ls -lah
-      - run: python -m pip install --upgrade pip
-      - run: pip install -r /home/runner/work/actions_test/secret_finder/code_scanner-master/requirements.txt
-      - run: |
-          cd ..
-          cd secret_finder
-          ls -lah
-          cd code_scanner-master
-          ls -lah
-          cd code_scanner
-          ls -lah
-          cd pretrained
-          pwd
-          ls -lah
-      - run: pip install -e /home/runner/work/actions_test/secret_finder/code_scanner-master
-      - run: code-scanner --scan-dir $(pwd)
+      = name: Upgrading pip and installing libraries from requirements.txt
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r /home/runner/work/actions_test/secret_finder/code_scanner-master/requirements.txt
+      - name: Installing code_scanner
+        run: pip install -e /home/runner/work/actions_test/secret_finder/code_scanner-master
+      - name: Scanning the repo
+        run: code-scanner --scan-dir $(pwd)
