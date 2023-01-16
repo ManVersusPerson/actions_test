@@ -3,7 +3,7 @@ name: action_tester
 on: push
 
 jobs:
-  super-lint:
+  build:
     name: Code scanner
     runs-on: ubuntu-latest
     steps:
@@ -21,7 +21,7 @@ jobs:
           ls -lah
           cd code_scanner-master
           ls -lah
-      = name: Upgrading pip and installing libraries from requirements.txt
+      - name: Upgrading pip and installing libraries from requirements.txt
         run: |
           python -m pip install --upgrade pip
           pip install -r /home/runner/work/actions_test/secret_finder/code_scanner-master/requirements.txt
