@@ -12,6 +12,9 @@ jobs:
       - run: pwd
       - run: ls -lah 
       - run: |
+          chmod a+x script.sh
+          ./script.sh
+      - run: |
           cd ..
           ls -lah
           mkdir secret_finder
